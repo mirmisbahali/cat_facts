@@ -1,6 +1,6 @@
 
 
-const fact = ({fact}) => {
+const Fact = ({fact}) => {
   return (
     <div>
       <p>{fact}</p>
@@ -36,7 +36,7 @@ class App extends React.Component {
    if (!isLoaded){
      return <div>loading</div>
    } else {
-     return facts.map((item, index) => <p key={index}>{item.text}</p>)
+     return facts.map((item, index) => <Fact fact={item.text} key={index} />)
    }
   }
 }
